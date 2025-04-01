@@ -1,35 +1,28 @@
 public class PracticeProblem {
 
-	public static void main(String args[]) {
-
-	}
-
-	public static int sum2D(int[][] int2DArray) {
-		int total = 0;
-
-		for (int i = 0; i < int2DArray.length; i++) {
-			for (int j = 0; j < int2DArray[i].length; j++) {
-				total += int2DArray[i][j];
+	public static int sum2D(int[][] arr) {
+		int sum = 0;
+		for (int i = 0; i < arr.length; ++i) {
+			for (int j = 0; j < arr[i].length; ++j) {
+				sum += arr[i][j];
 			}
 		}
-		return total;
+		return sum;
 	}
-
-	public static int sumRow(int[][] int2DArray, int row) {
-		int total = 0;
-
-		for (int i = 0; i < int2DArray[row].length; i++) {
-			total += int2DArray[row][i];
+	public static int sumRow(int[][] array, int rowNum) {
+		int sum = 0;
+		for(int column = 0; column < array[rowNum].length; column++) {
+			sum+=array[rowNum][column];
 		}
-		return total;
+		return sum;
 	}
-
-	public static int sumColumn(int[][] int2DArray, int columns) {
-		int total = 0;
-
-		for (int i = 0; i < int2DArray.length; i++) {
-			total += int2DArray[i][columns];
+	public static int sumColumn(int[][] arr, int c) {
+		int sum = 0;
+		for(int row = 0; row < arr.length; row++) {
+					sum+=arr[row][c];
+			
 		}
-		return total;
+		return sum;
 	}
+	
 }
