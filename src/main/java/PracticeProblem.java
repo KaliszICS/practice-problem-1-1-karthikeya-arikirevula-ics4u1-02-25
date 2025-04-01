@@ -4,24 +4,32 @@ public class PracticeProblem {
 
 	}
 
-	public static void q1() {
-		//Write question 1 code here
+	public static int sum2D(int[][] int2DArray) {
+		int total = 0;
+
+		for (int i = 0; i < int2DArray.length; i++) {
+			for (int j = 0; j < int2DArray[i].length; j++) {
+				total += int2DArray[i][j];
+			}
+		}
+		return total;
 	}
 
-	public static void q2() {
-		//Write question 2 code here
+	public static int sumRow(int[][] int2DArray, int row) {
+		int total = 0;
+
+		for (int i = 0; i < int2DArray[row].length; i++) {
+			total += int2DArray[row][i];
+		}
+		return total;
 	}
 
-	public static void q3() {
-		//Write question 3 code here
-	}
+	public static int sumColumn(int[][] int2DArray, int columns) {
+		int total = 0;
 
-	public static void q4() {
-		//Write question 4 code here
+		for (int i = 0; i < int2DArray.length; i++) {
+			total += int2DArray[i][columns];
+		}
+		return total;
 	}
-
-	public static void q5() {
-		//Write question 5 code here
-	}
-
 }
